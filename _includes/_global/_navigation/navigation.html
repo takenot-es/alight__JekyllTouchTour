@@ -1,0 +1,27 @@
+<div class="sidebar-nav" style="width: 280px;">
+    <a href="/index.html" class="logo">
+        {% include /_global/_branding/logo.svg %}
+    </a>
+    {% for nav in site.data.navigation %}
+        <ul class="nav-links-container">
+            <li class="nav-title">
+                <h4>
+                    {{ nav.nav }}
+                </h4>
+            </li>
+            {% for item in nav.nav_links %}
+            <li class="nav-link">
+                {% capture active_link %}/pages/{{ item.link }}.html{% endcapture %}
+                <a href="{{ item.link | prepend: '/pages/' | append: '.html' }}" class="{% if active_link == page.url %}active{% endif %}">
+                    <span class="icon">
+                        <i class="fa-solid fa-gradient {{ item.icon }}"></i>
+                    </span>
+                    <span>
+                        {{ item.link_title }}
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+  </div>

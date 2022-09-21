@@ -1,0 +1,17 @@
+- nav: Powering confident decisions...
+  nav_links:
+  - link_title: For work and life
+    link: for-work-and-life
+    icon: fa-people-group
+  - link_title: For a healthier, more financially secure life
+    link: secure-life
+    icon: fa-heart
+  - link_title: From hire through retire
+    link: hire-to-retire
+    icon: fa-briefcase
+  - link_title: For more freedom
+    link: freedom
+    icon: fa-money-bill-trend-up
+  - link_title: For your HCM cloud
+    link: hcm-cloud
+    icon: fa-cloud

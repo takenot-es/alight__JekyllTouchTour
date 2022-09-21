@@ -1,0 +1,99 @@
+.sidebar-nav {
+    background: rgba($slate-100, 1);
+    background: linear-gradient(351deg, rgba($slate-100,1) 0%, rgba($slate-90,1) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 0 2rem 2rem 0;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 2rem;
+    left: 0;
+    bottom: 2rem;
+
+    //Sidebar Branding
+    .logo {
+        margin-top: 1rem;
+        display: flex;
+        width: 100%;
+        padding: $spacer-1 $spacer-2;
+    }
+
+    .logo > svg {
+        width: 100px;
+    }
+    //End Sidebar Branding
+
+    .nav-links-container {
+        list-style: none;
+        padding: $spacer-1;
+
+        //Navlink Title
+        .nav-title {
+            padding-left: $spacer-1;
+ 
+            > h4 {
+             color: $yellow-100;
+            }
+         }
+         //End Navlink title
+
+        //Sidebar Navlink
+        .nav-link {
+            > a {
+                display: flex;
+                padding: $spacer-1;
+                text-decoration: none;
+                align-items: center;
+                color: $white;
+                position: relative;
+                border-radius: $spacer-1;
+                transition: .3s ease-in-out;
+
+                //Icon
+                .icon {
+                    margin-right: $spacer-1;
+                }
+                //End Icon
+
+                //Standard Hover Actions
+                &:hover {
+                    background-color: rgba($black,.2);
+
+                    .icon > .fa-gradient {
+                        background: rgba($blue,1);
+                        background: linear-gradient(90deg, rgba($yellow-100,1) 0%, rgba($blue,1) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                }
+                //End Standard Hovers
+
+               //Begin Active State
+               &.active {
+                background-color: rgba($black,.5);
+                transition: .3s ease-in-out;
+
+                .icon > .fa-gradient {
+                    background: rgba($blue,1);
+                    background: linear-gradient(90deg, rgba($yellow-100,1) 0%, rgba($blue,1) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                    &:hover {
+                        background-color: rgba($black,.2);
+                    }
+
+                }
+                //End Active State
+
+            }
+
+        }
+        //End Sidebar Navlink
+
+    }
+
+}

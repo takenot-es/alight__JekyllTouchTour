@@ -1,0 +1,12 @@
+@each $name, $color in $colors {
+    .bg--#{$name} {
+        background-color: $color;
+    }
+}
+
+.bg- {
+    &-events-gradient {
+        background: rgba($yellow-100, 1);
+        background: linear-gradient(351deg, rgba($yellow-100,1) 0%, rgba($yellow-100, .0) 100%);
+    }
+}

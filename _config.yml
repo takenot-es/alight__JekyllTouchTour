@@ -1,0 +1,14 @@
+title: Alight, Inc. Touch Tour
+email: ryan.underwood@alight.com
+description: Touch Tour for Alight Solutions
+base_styles: '/assets/styles/global.css'
+baseurl: ""
+url: ""
+
+collections: 
+  pages: 
+    output: true
+    url: /:collection/:title
+
+plugins:
+  - jekyll-feed
